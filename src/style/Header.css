@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap');
+.navgationBar{
+    display:flex;
+    justify-content: space-between;
+    padding: 0.5% 1%  0.5% 1%;
+    background-color: red;
+}
+
+#heading{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 2em;
+}
+
+#selectOptions{
+
+}
+#logo{
+    width:4vh;
+    height:4vh;
+}
+
+.logo-name{
+    width:30%;
+    margin-left:10%;
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-around;
+}
