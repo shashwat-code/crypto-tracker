@@ -1,7 +1,10 @@
+import Banner from "../components/Banner";
+import CoinTable from "../components/CoinTable";
 function HomePage(){
     return(
         <div>
-        Home Page
+            <Banner />
+            <CoinTable />
         </div>
     )
 }

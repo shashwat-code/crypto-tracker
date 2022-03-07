@@ -1,0 +1,16 @@
+.container{
+    background-color: blue;
+    height:60vh;
+}
+
+#typing-effect{
+    display:flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+#typewrite{
+    margin-right: 1%;
+    text-transform: uppercase;
+    color: red;
+}

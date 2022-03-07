@@ -1,16 +1,15 @@
 import "../style/Header.css"
-
 function Header(){
     return(
         <nav className="navgationBar">
            <div className="logo-name">
-           <img  id="logo" src={require("../Assets/logo.png")}></img>
-           <label id="heading">Crypto Tracker</label>
+           <img onClick={()=>{ }}  id="logo" src={require("../Assets/logo.png")}></img>
+           <h4 id="heading">Crypto Tracker</h4>
            </div>
            {/* select component should be created custom */}
            <select id="selectOptions">
-               <option>INR</option>
-               <option>Dollar</option>
+               <option value="1">INR</option>
+               <option value="2">Dollar</option>
             </select> 
         </nav>
     )
