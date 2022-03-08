@@ -23,7 +23,7 @@ const Carousel=()=>{
     if(items===null){return(<></>)}
     return (
         
-        <div height="50px">
+        <div id="carouselAlice">
             <AliceCarousel
                 mouseTracking
                 infinite

@@ -3,7 +3,7 @@ import  "../style/Table.css"
 
 import { useState } from "react"
 import TableBodyRow from "./TableBodyRow"
-function Table({data}){
+function Table({data,setParam}){
     
     
     
@@ -14,7 +14,7 @@ function Table({data}){
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Name</th>
+                    <th onClick={()=>{setParam("name")}} >Name</th>
                     <th>Price</th>
                     <th>24h %</th>
                     <th>Market Cap</th>

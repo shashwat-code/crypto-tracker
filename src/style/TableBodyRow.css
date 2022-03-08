@@ -1,6 +1,6 @@
 #coin-table tbody td{
     color:white;
-    font-size: 1.1rem;
+    font-size: 1rem;
     background-color: rgba( 22, 23, 26, 100%);
     border-bottom: 1px solid rgba(255,255,255,0.7);
 }
@@ -31,6 +31,7 @@
 }
 #name-txt label{
     padding-left: 2%;
+    font-size: 1rem;
 }
 
 #price{
@@ -50,7 +51,7 @@
     align-items: center;
     width:52%;
     float: right;
-    /* padding-right: 17%; */
+    padding-right: 11%;
 }
 #price-change img{
     padding-right: 8%;
@@ -62,6 +63,7 @@
 #market-cap label{
     float: right;
     padding-right:7%;
+    font-size: 1rem;
 }
 #total-volumne{
     width:12%;
@@ -69,6 +71,7 @@
 #total-volumne label{
     float: right;
     padding-right: 7%;
+    font-size: 1rem;
 }
 #circulating-supply{
     width:12%;
@@ -76,6 +79,7 @@
 #circulating-supply label{
     float: right;
     padding-right: 7%;
+    font-size: 1rem;
 }
 
 tr:hover{

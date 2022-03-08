@@ -8,9 +8,10 @@ function Banner(){
     return(
         <div className="container">
             <Canvas />
-            <TypeWriter />
+            <img id="wallpaper" src="https://i.pinimg.com/originals/e8/d3/80/e8d380dc0a17661001f487c68c7b66c6.jpg"/>
+            <TypeWriter   />
+            {/* <h1 id="typewriter"  style={{color:"red"}} >Shashwat singh chauhan</h1> */}
             <Carousel />
-    Banner
     </div>)
 }
 

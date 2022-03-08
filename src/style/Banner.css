@@ -1,16 +1,47 @@
 .container{
     background-color: blue;
-    height:60vh;
+    height:75vh;
+    position: relative;
 }
 
 #typing-effect{
     display:flex;
     align-items: flex-end;
-    justify-content: flex-start;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3vh;
+    justify-content: center;
+    position: absolute;
+    top:10%;
+    color:white;
+    width:100%;
 }
 
 #typewrite{
     margin-right: 1%;
     text-transform: uppercase;
-    color: red;
+}
+#typewriter{
+    position: absolute;
+    top:100px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    color:white
+}
+
+#wallpaper{
+    fill:cover;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    padding:0;
+    
+}
+
+#carouselAlice{
+    position: absolute;
+    /* background-color: aqua; */
+    bottom: 0%;
+    width:100%;
 }

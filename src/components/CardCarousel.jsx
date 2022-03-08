@@ -1,4 +1,5 @@
 import "../style/cardCarousel.css"
+import {numberWithCommas} from "../config/commonFunction"
 function CardCarousel({item}){
 
     let color = (price_change_24h)=>{
@@ -7,13 +8,17 @@ function CardCarousel({item}){
     let profit=(num)=>{
         return num>0?"+"+num+"%":num+"%"
     }
+    const colorFinal =color(item.price_change_percentage_24h)
     return(
         <div id="card">
-            <h3>Rank: {item.market_cap_rank}</h3>
+            <h3 className="rank"># {item.market_cap_rank}</h3>
             <img src={item.image}></img>
             <h3>{item.name}</h3>
-            <div>{item.symbol.toUpperCase()}<span style={{color: color(item.price_change_percentage_24h)}}>{profit(item.price_change_percentage_24h)}</span></div>
-            <h3>{item.current_price}</h3>
+            <div id="price-change" style={{ borderColor: colorFinal}} >
+                <label>{item.symbol.toUpperCase()}</label>
+                <span style={{color: colorFinal}}>{profit(item.price_change_percentage_24h)}</span>
+            </div>
+            <h3>{numberWithCommas(item.current_price)}</h3>
 
         </div>
     )

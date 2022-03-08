@@ -2,8 +2,10 @@ function  Canvas(){
 
 
     return(
-        <canvas id="canvas">
-        </canvas>
+        <div id="canvas">
+            <div></div>
+            {/* <img src={require("../Assets/red.png")}> </img> */}
+        </div>
     )
 }
 
