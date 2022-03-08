@@ -3,16 +3,25 @@ import {useState} from "react"
 import { CoinList } from "../config/api"
 import SearchBtn from "./SearchBtn"
 import Table from "./Table"
+import "../style/coinTable.css"
 function CoinTable(){
-    const [searchinput,setSearchInput]=useState("")
+    const [filteredData,setFilteredData]=useState("")
     const [coins,setCoins]=useState([])
     const [inputText,setInputText]=useState("")
     useEffect(()=>{fetchList()},[])
+    useEffect(()=>{filterData()},[inputText])
     const fetchList = async()=>{
         const data = await fetch(CoinList('INR')).then(res=>res.json())
-        console.log(data)
         setCoins(data)
-      }
+    }
+    const filterData = ()=>{
+        const filteredData = coins.filter((coin)=>{
+            console.log("printed first: ",coin.name)
+            return coin.name.toLowerCase().includes(inputText) || coin.symbol.toLowerCase().includes(inputText)
+        })
+        setFilteredData(filteredData)
+        console.log(filteredData)
+    }
     console.log(inputText)
     return(
         <div id="container">coin table

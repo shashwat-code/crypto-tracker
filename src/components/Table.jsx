@@ -1,9 +1,12 @@
 import  "../style/Table.css"
 
+
+import { useState } from "react"
+import TableBodyRow from "./TableBodyRow"
 function Table({data}){
-    const changeColor = (num)=>{
-        return num>=0?"green":"red"
-    }
+    
+    
+    
 
     return(
         <div>
@@ -23,21 +26,9 @@ function Table({data}){
             <tbody>
                 {
                     data.map(item=>{
-                        let color = changeColor(item.price_change_percentage_24h)
-                        let value = color==="green"?("+"+item.price_change_percentage_24h):(item.price_change_percentage_24h)
-                        return (
-                            <tr key={item.id}>
-                                <th>{item.market_cap_rank}</th>
-                                <th>{item.name}</th>
-                                <th>{item.current_price}</th>
-                                {
-                                }
-                                <th style={{color:color}}>{value}</th>
-                                <th>{item.market_cap}</th>
-                                <th>{item.total_volume}</th>
-                                <th>{item.circulating_supply}</th>
-                                <th>last 7 days pending</th>
-                            </tr>
+                         return (
+                        
+                                <TableBodyRow key={item.id} item={item}  />
                         )
                     })
                 }

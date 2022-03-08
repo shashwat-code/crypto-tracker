@@ -13,7 +13,7 @@ function SearchBtn({setInputText}){
             onChange={(e)=>handleFunction(e)}
             className="txt" 
             placeholder="Search crypto" />
-                <img onClick={()=>{}} id="search-img" src={require("../Assets/searchBtn.png")}></img>
+                <img onClick={()=>{setInputText(text)}} id="search-img" src={require("../Assets/searchBtn.png")}></img>
         </div>
     )
 }

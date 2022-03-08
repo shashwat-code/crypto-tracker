@@ -1,7 +1,8 @@
 function CoinDetailPage(){
+    console.log("entered the arena")
     return(
         <div>
-        Coin Page
+        Coin Pagejkbfjsdhlbghjfdjhniugewruigbfgiune
         </div>
     )
 }
