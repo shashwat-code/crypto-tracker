@@ -11,7 +11,6 @@ function App() {
       <div style={{ width: 700 }}>
        
       </div>
-        {/* <HistoricDataChart/> */}
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} ></Route>

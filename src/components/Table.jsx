@@ -11,7 +11,7 @@ function Table({data,setParam}){
     return(
         <div>
         <table id="coin-table">
-            <thead>
+            <thead id="thead-fix">
                 <tr>
                     <th>#</th>
                     <th onClick={()=>{setParam("name")}} >Name</th>

@@ -7,13 +7,13 @@ function SearchBtn({setInputText}){
         setInputText(e.target.value)
       }
     return(
-        <div className="btn-box">
+        <div className="btn-box" style={{backgroundColor:"white",width:"40%"}}>
             <input 
             value={text} 
             onChange={(e)=>handleFunction(e)}
             className="txt" 
             placeholder="Search crypto" />
-                <img onClick={()=>{setInputText(text)}} id="search-img" src={require("../Assets/searchBtn.png")}></img>
+                <img onClick={()=>{setInputText(text)}} id="search-img" src={require("../Assets/searchBtn.png")} />
         </div>
     )
 }
