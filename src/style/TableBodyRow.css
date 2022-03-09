@@ -82,8 +82,9 @@
     font-size: 1rem;
 }
 
-#coin-table tbody tr:hover{
+#new-row:hover{
     /* border-right:1px solid white; */
     transform: scale(1.01);
+    /* text-transform: capitalize; */
     /* background-color: red; */
 }

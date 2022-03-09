@@ -15,7 +15,7 @@ function TableBodyRow({item}){
     const circulating = item.circulating_supply.toFixed(2)
     return( 
                
-        <tr onClick={()=>{navigate(`/coins/${item.id}`)}}>
+        <tr id="new-row" onClick={()=>{navigate(`/coins/${item.id}`)}}>
             <td id="rank">{item.market_cap_rank}</td>
 
                 <td id="name">
