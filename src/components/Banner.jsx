@@ -8,7 +8,7 @@ function Banner(){
     return(
         <div className="container">
             <Canvas />
-            <img id="wallpaper" src="https://i.pinimg.com/originals/e8/d3/80/e8d380dc0a17661001f487c68c7b66c6.jpg"/>
+            <img id="wallpaper" src="https://uploads-ssl.webflow.com/6139e071178ba7042629f424/61a62b3ef0879644f7d04a2f_dark_bg_big.png"/>
             <TypeWriter   />
             {/* <h1 id="typewriter"  style={{color:"red"}} >Shashwat singh chauhan</h1> */}
             <Carousel />

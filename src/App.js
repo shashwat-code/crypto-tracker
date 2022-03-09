@@ -8,9 +8,7 @@ function App() {
   return (
     <Router>
       <div>
-      <div style={{ width: 700 }}>
-       
-      </div>
+
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} ></Route>
