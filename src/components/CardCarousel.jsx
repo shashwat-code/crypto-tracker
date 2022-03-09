@@ -5,7 +5,11 @@ function CardCarousel({item}){
     let color = (price_change_24h)=>{
         return price_change_24h>=0?"green":"red"
     }
+    const newdata = item.price_change_percentage_24h
+    const pricePercentageRAW = item.price_change_percentage_24h.toFixed(2)
+    console.log(pricePercentageRAW)
     let profit=(num)=>{
+
         return num>0?"+"+num+"%":num+"%"
     }
     const colorFinal =color(item.price_change_percentage_24h)
@@ -14,9 +18,9 @@ function CardCarousel({item}){
             <h3 className="rank"># {item.market_cap_rank}</h3>
             <img src={item.image}></img>
             <h3>{item.name}</h3>
-            <div id="price-change" style={{ borderColor: colorFinal}} >
-                <label>{item.symbol.toUpperCase()}</label>
-                <span style={{color: colorFinal}}>{profit(item.price_change_percentage_24h)}</span>
+            <div id="price-change1" style={{ borderColor: colorFinal}} >
+                <label>{item.symbol.toUpperCase()} :  </label>
+                <span style={{color: colorFinal}}> {profit(pricePercentageRAW)}</span>
             </div>
             <h3>{numberWithCommas(item.current_price)}</h3>
 

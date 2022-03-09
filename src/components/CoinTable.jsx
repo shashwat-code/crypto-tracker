@@ -43,7 +43,7 @@ function CoinTable(){
 
     console.log(inputText)
     return(
-        <div id="container">coin table
+        <div id="container">
             <SearchBtn  setInputText={setInputText} />
             {
                 filteredData.length!==0?<Table setParam={setParam} data={filteredData}/>:<Table setParam={setParam} data={coins}/>

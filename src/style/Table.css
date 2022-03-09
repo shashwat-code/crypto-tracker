@@ -1,5 +1,7 @@
 #coin-table{
     border-collapse:collapse;
+    width:95%;
+    margin: auto;
 }
 
 

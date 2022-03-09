@@ -3,7 +3,6 @@
     font-size: 1rem;
     background-color: rgba( 22, 23, 26, 100%);
     border-bottom: 1px solid rgba(190,254,254,0.7);
-    box-shadow: 10px 0px 8px white;
 }
 #coin-table tbody tr{
     padding: 0px;
@@ -83,8 +82,8 @@
     font-size: 1rem;
 }
 
-tr:hover{
-    border:none;
-    /* transform: scale(1.2); */
+#coin-table tbody tr:hover{
+    /* border-right:1px solid white; */
+    transform: scale(1.01);
     /* background-color: red; */
 }
