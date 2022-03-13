@@ -15,7 +15,7 @@ const Carousel=()=>{
         512:{items:4}
     }
     const items =trendingCoinData.map((item)=>{
-        return <Link className={Classnames.carouselItem} to={`/coins/${item.id}`} >
+        return <Link className={Classnames.carouselItem} to={`/CoinDetailPage/${item.id}`} >
             <CardCarousel item={item} />
         </Link>
     })

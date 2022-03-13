@@ -1,12 +1,12 @@
 import  "../style/Table.css"
 
-
+import {useNavigate} from "react-router-dom"
 import { useState } from "react"
 import TableBodyRow from "./TableBodyRow"
 function Table({data,setParam}){
     
     
-    
+    const navigate = useNavigate()
 
     return(
         <div>

@@ -8,11 +8,10 @@ function App() {
   return (
     <Router>
       <div>
-
         <Header />
         <Routes>
-          <Route path="/" element={<HomePage />} ></Route>
-          <Route path="/coin/:id" element={<CoinDetailPage />}></Route>
+          <Route path="/" element={<HomePage />} > </Route>
+          <Route path="/CoinDetailPage/:id" element={<CoinDetailPage />}></Route>
         </Routes>
       </div>
     </Router>
