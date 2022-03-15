@@ -3,17 +3,18 @@ import HomePage from "./Pages/Homepage";
 import Header from "./components/Header";
 import CoinDetailPage from "./Pages/CoinDetailPage";
 import "./style/App.css"
+import { Box } from "@mui/material";
 function App() {
   
   return (
     <Router>
-      <div>
+      <Box>
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} > </Route>
           <Route path="/CoinDetailPage/:id" element={<CoinDetailPage />}></Route>
         </Routes>
-      </div>
+      </Box>
     </Router>
   );
 }

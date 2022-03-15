@@ -9,21 +9,20 @@ import { useEffect } from "react";
 import {HistoricalChart} from '../config/api'
 
 import { useState } from "react";
+import HistoryChartModuleDetail from "./HistoryChartModuleDetail";
+import HistoricDataChart from "./HistoricDataChart";
 
 function ChartDataModule({id}) {
   const [timeline, setTimeline] = useState(1);
 
-  useEffect(async ()=>{
-      const data = await fetch(HistoricalChart(id,timeline,"INR")).then(res=>res.json()).then(response=>{console.log(response)})
-  },[timeline])
 
   const handleChange = (event, newTimeline) => {
     setTimeline(newTimeline);
     console.log(newTimeline)
   };
   return (
-    <Grid>
-      <Card>
+    <Grid item lg={12}  xs={12}>
+      <Card elevation={8}>
         <CardContent>
         <ToggleButtonGroup
       color="primary"
@@ -36,6 +35,8 @@ function ChartDataModule({id}) {
       <ToggleButton value={30}>30 days</ToggleButton>
       <ToggleButton value={365}>1 year</ToggleButton>
     </ToggleButtonGroup>
+    {/* <HistoricDataChart id={id} /> */}
+    <HistoryChartModuleDetail id={id} timeline={timeline} />
          
         </CardContent>
       </Card>

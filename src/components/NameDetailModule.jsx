@@ -3,7 +3,7 @@ import { Grid, Typography, Card, CardContent, Avatar } from "@mui/material";
 
 function NameDetailModule({ image, name, symbol,rank ,detail}) {
   return (
-    <Grid lg={12} item spacing={1} >
+    <Grid lg={12} xs={12}  item spacing={2} >
       <Card sx={{ display: "flex", alignItems:"center" }} elevation={3}>
       <Typography variant="h4"  sx={{ml:2}} > #{rank}</Typography>
         <Avatar

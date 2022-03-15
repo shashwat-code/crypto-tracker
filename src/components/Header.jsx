@@ -1,18 +1,36 @@
-import "../style/Header.css"
-function Header(){
-    return(
-        <nav className="navgationBar">
-           <div className="logo-name">
-           <img onClick={()=>{ }}  id="logo" src={require("../Assets/logo.png")}></img>
-           <h4 id="heading">Crypto Tracker</h4>
-           </div>
-           {/* select component should be created custom */}
-           <select id="selectOptions">
-               <option value="1">INR</option>
-               <option value="2">Dollar</option>
-            </select> 
-        </nav>
-    )
-}
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 
+const Header = () => {
+
+
+  return (
+    <AppBar position="static">
+      <Container >
+        <Toolbar >
+          <Typography
+            variant="h4"
+            noWrap
+            component="div"
+            sx={{display: { xs: 'none', md: 'flex',lg:'flex' },justifyContent:"center" }}
+          >
+            CRYPTO TRACKER
+          </Typography>
+          
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{ flexGrow: 1,ml:2, display: { xs: 'flex', md: 'none' } }}
+          >
+            CRYPTO TRACKER
+          </Typography>
+        </Toolbar>
+      </Container>
+    </AppBar>
+  );
+};
 export default Header;

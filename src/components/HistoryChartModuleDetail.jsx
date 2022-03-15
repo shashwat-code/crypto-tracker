@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import { Line } from "react-chartjs-2";
+import { Line,Area } from "react-chartjs-2";
 import { HistoricalChart } from "../config/api";
 import {
   Chart as ChartJS,
@@ -13,6 +13,7 @@ import {
   Legend,
   Scale,
 } from "chart.js";
+import { Grid } from "@mui/material";
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -22,54 +23,58 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-const HistoricDataChart = (props) => {
+const HistoryChartModuleDetail = (props) => {
   const [historicData, setHistoricData] = useState(null);
   const fetchData = async () => {
-    const data = await fetch(HistoricalChart(props.id, 7, "INR"))
+    const data = await fetch(HistoricalChart(props.id, props.timeline, "INR"))
       .then((res) => res.json())
       .then((response) => {
         return response;
       });
+    console.log(data)
     setHistoricData(data["prices"]);
+    console.log(historicData)
   };
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [props.timeline]);
 
   if (historicData === null) {
     return <>Loading....</>;
   }
 
   return (
-    <div style={{ width: "90%", height: "5%", background: "none" }}>
+    <Grid item lg={12}>
       <Line
         data={{
-          labels: historicData.map((coin, index) => {
-            return index;
-          }),
+          labels: historicData.map((i,index)=>{return index}),
 
-          datasets: [
-            {
-              data: historicData.map((coin) => coin[1]),
-              label: `1`,
-              borderColor: props.color,
-              borderWidth: 0.7,
-            },
-          ],
+          datasets: [{
+            label: 'My First Dataset',
+            data: historicData.map((coin) => coin[1]),
+            fill: true,
+            borderColor: 'rgb(75, 192, 192)',
+            tension: 0.4
+          }],
         }}
         options={{
           responsive: true,
-          color: [{ fillColor: "red" }, { fillColor: "#0066ff" }],
+          color: [{ fillColor: "red" }, { fillColor: "green" }],
+          // tension:1,
             
           scales: {
             x: {
               ticks: {
-                display: false,
+                callback: function(val, index) {
+                  // Hide every 2nd tick label
+                  return index? this.getLabelForValue(val) : '';
+                },
+                display: true,
               },
               grid: {
                 display: false,
-                drawBorder: false,
+                drawBorder: true,
               },
             },
             y: {
@@ -78,7 +83,7 @@ const HistoricDataChart = (props) => {
               },
               grid: {
                 display: false,
-                drawBorder: false,
+                drawBorder: true,
               },
             },
           },
@@ -103,7 +108,8 @@ const HistoricDataChart = (props) => {
           },
         }}
       />
-    </div>
+    </Grid>
   );
 };
-export default HistoricDataChart;
+
+export default HistoryChartModuleDetail

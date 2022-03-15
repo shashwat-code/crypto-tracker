@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 function CurrentDataModule({ currentPrice, high24, low24,value }) {
   const classes = useStyles();
   return (
-    <Grid container spacing={2} item>
+    <Grid container spacing={1} item>
       <Grid item lg={12}>
         <Card elevation={3}>
           <CardHeader title="Current" subheader="current price and changes within 24 hrs" />
@@ -34,8 +34,8 @@ function CurrentDataModule({ currentPrice, high24, low24,value }) {
         </Card>
       </Grid>
 
-      <Grid item container lg={12} spacing={2}>
-        <Grid item lg={6}>
+      <Grid item container lg={12} spacing={1}>
+        <Grid item lg={6} xs={6}>
           <Card elevation={3}>
             <CardHeader title="All-Time High" subheader="within 24 hrs" />
             <CardContent
@@ -53,7 +53,7 @@ function CurrentDataModule({ currentPrice, high24, low24,value }) {
           </Card>
         </Grid>
 
-        <Grid item lg={6}>
+        <Grid item lg={6} xs={6}>
           <Card elevation={3}>
             <CardHeader title="All-Time Low" subheader="within 24 hrs" />
             <CardContent

@@ -8,7 +8,7 @@ import {
   } from "@mui/material";
   
   function DevelopersDataModule({ score, data }) {
-    console.log(data);
+    // console.log(data);
     return (
       <Grid item> 
         <Card elevation={7}>

@@ -15,12 +15,12 @@ function CoinDetailPage() {
   const { id } = useParams();
   const [data, setData] = useState(null);
   const [history, setHistory] = useState([]);
-  console.log("entered the arena", id);
+  // console.log("entered the arena", id);
   useEffect(async () => {
     const data = await fetch(SingleCoin(id))
       .then((res) => res.json())
       .then((response) => {
-        console.log(response);
+        // console.log(response);
 
         return response;
       });
@@ -36,15 +36,15 @@ function CoinDetailPage() {
     ];
     setHistory(arr);
   }, []);
-  console.log("this is data: ", data);
+  // console.log("this is data: ", data);
   if (data === null) {
     return <>loading...</>;
   }
 
   return (
-    <Grid container sx={{ ml: 2, mt: 2 }} spacing={4}>
-      <Grid item container lg={6} spacing={1}>
-        <Grid container item lg={6} spacing={2}>
+    <Grid container sx={{mt:2}} spacing={1}>
+      <Grid item container lg={6} xs={12}  spacing={1} order={{xs:2,lg:1}}>
+        <Grid container item lg={6} xs={12} spacing={3}>
           <NameDetailModule
             detail={data.description.en}
             name={data.name}
@@ -53,25 +53,25 @@ function CoinDetailPage() {
             rank={data.market_cap_rank}
           />
           <CurrentDataModule
-            lg={12}
+            lg={12} 
             currentPrice={data.market_data.current_price.inr}
             high24={data.market_data.high_24h.inr}
             low24={data.market_data.low_24h.inr}
             value={data.market_data.price_change_percentage_24h}
           />
         </Grid>
-        <Grid item lg={6} container>
+        <Grid item lg={6} xs={12} container>
           <HistoryDataModule item history={history} />
         </Grid>
-        <Grid item container lg={12} sx={{display:"flex",justifyContent:"space-between"}}>
-          <Grid container item lg={4}>
+        <Grid item container lg={12} spacing={1} sx={{display:"flex",justifyContent:"space-between"}}>
+          <Grid  item lg={4} xs={12}>
             <CommunityDataModule
               item
               score={data.community_score}
               data={data.community_data}
             />
           </Grid>
-          <Grid container item lg={4}>
+          <Grid  item lg={4} xs={12}>
             <DevelopersDataModule
               item
               score={data.developer_score}
@@ -79,7 +79,7 @@ function CoinDetailPage() {
             />
           </Grid>
 
-          <Grid container item lg={4}>
+          <Grid  item lg={4} xs={12}>
             <MarketDataModule
               item
               liquidity_score={data.liquidity_score}
@@ -90,10 +90,14 @@ function CoinDetailPage() {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item>
+      <Grid item container spacing={0} lg={6} order={{xs:1,lg:2}} >
         <ChartDataModule id={data.id} />
       </Grid>
     </Grid>
   );
 }
 export default CoinDetailPage;
+
+{/* <ChartDataModule id={data.id} />
+<ChartDataModule id={data.id} />
+<ChartDataModule id={data.id} /> */}
