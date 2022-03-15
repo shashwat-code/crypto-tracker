@@ -1,9 +1,9 @@
 import {TrendingCoins} from "../config/api"
 import {useEffect,useState} from "react"
-import axios from "axios"
 import AliceCarousel, { Classnames } from "react-alice-carousel"
 import { Link } from "react-router-dom"
 import CardCarousel from "./CardCarousel"
+import { Grid } from "@mui/material"
 const Carousel=()=>{
     const [trendingCoinData,setTrendingCoinData]=useState([ ])
     const trendingAPI = async () =>{
@@ -23,7 +23,7 @@ const Carousel=()=>{
     if(items===null){return(<></>)}
     return (
         
-        <div id="carouselAlice">
+        <Grid lg={12}  id="carouselAlice">
             <AliceCarousel
                 mouseTracking
                 infinite
@@ -36,7 +36,7 @@ const Carousel=()=>{
                 autoPlay
                 items={items}
             ></AliceCarousel>
-        </div>
+        </Grid>
     )
 }
 

@@ -2,9 +2,9 @@ import { Grid, Stack,Card,CardHeader,Divider, CardContent } from "@mui/material"
 import ProfitArrow from "./ProfitArrow"
 function HistoryDataModule({history}) {
     console.log(history)
-  return <Grid item >
+  return <Grid>
       <Card elevation={5}>
-          <CardHeader title="Previous Data" subheader="fetched from coin getcho API" />
+          <CardHeader title="Previous Data" subheader="fetched from coin gecko" />
       <CardContent>
       {
           history.map(item=>{

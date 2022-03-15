@@ -14,7 +14,7 @@ function NameDetailModule({ image, name, symbol,rank ,detail}) {
             mt: 1,
             mb: 1,
             ml: 1,
-            bgcolor: purple[500],
+            bgcolor: "none",
           }}
         />
         <CardContent>

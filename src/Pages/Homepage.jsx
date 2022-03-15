@@ -1,11 +1,12 @@
+import { Box } from "@mui/material";
 import Banner from "../components/Banner";
 import CoinTable from "../components/CoinTable";
 function HomePage(){
     return(
-        <div>
-            <Banner />
+        <Box sx={{display:"flex",flexDirection:"column"}}>
+            <Banner style={{backgroundColor:"red"}} />
             <CoinTable />
-        </div>
+        </Box>
     )
 }
 

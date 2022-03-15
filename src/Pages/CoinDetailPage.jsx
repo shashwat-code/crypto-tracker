@@ -42,8 +42,8 @@ function CoinDetailPage() {
   }
 
   return (
-    <Grid container sx={{mt:2}} spacing={1}>
-      <Grid item container lg={6} xs={12}  spacing={1} order={{xs:2,lg:1}}>
+    <Grid container sx={{mt:2,pl:1,pr:1}} spacing={1}>
+      <Grid item container lg={6} xs={12}  spacing={1}  order={{xs:2,lg:1}}>
         <Grid container item lg={6} xs={12} spacing={3}>
           <NameDetailModule
             detail={data.description.en}
@@ -64,14 +64,14 @@ function CoinDetailPage() {
           <HistoryDataModule item history={history} />
         </Grid>
         <Grid item container lg={12} spacing={1} sx={{display:"flex",justifyContent:"space-between"}}>
-          <Grid  item lg={4} xs={12}>
+          <Grid  item lg={4} md={12} xs={12} order={{xs:2}}>
             <CommunityDataModule
               item
               score={data.community_score}
               data={data.community_data}
             />
           </Grid>
-          <Grid  item lg={4} xs={12}>
+          <Grid  item lg={4} xs={12} order={{xs:3}}>
             <DevelopersDataModule
               item
               score={data.developer_score}
@@ -79,7 +79,7 @@ function CoinDetailPage() {
             />
           </Grid>
 
-          <Grid  item lg={4} xs={12}>
+          <Grid  item lg={4} xs={12} order={{xs:1}}>
             <MarketDataModule
               item
               liquidity_score={data.liquidity_score}
@@ -90,8 +90,8 @@ function CoinDetailPage() {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item container spacing={0} lg={6} order={{xs:1,lg:2}} >
-        <ChartDataModule id={data.id} />
+      <Grid  item container spacing={0} lg={6} order={{xs:1,lg:2}} >
+        <ChartDataModule id={data.id} currentPrice={data.market_data.price_change_percentage_24h} />
       </Grid>
     </Grid>
   );

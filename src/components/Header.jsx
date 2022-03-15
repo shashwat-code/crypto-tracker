@@ -15,7 +15,7 @@ const Header = () => {
             variant="h4"
             noWrap
             component="div"
-            sx={{display: { xs: 'none', md: 'flex',lg:'flex' },justifyContent:"center" }}
+            sx={{display: { xs: 'none', md: 'flex',lg:'flex' },justifyContent:"flex-start" }}
           >
             CRYPTO TRACKER
           </Typography>

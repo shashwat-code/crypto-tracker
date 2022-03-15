@@ -23,15 +23,16 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-const HistoryChartModuleDetail = (props) => {
+const HistoryChartDetailModule = (props) => {
   const [historicData, setHistoricData] = useState(null);
+  const color = props.price>=0?"green":"red"
   const fetchData = async () => {
     const data = await fetch(HistoricalChart(props.id, props.timeline, "INR"))
       .then((res) => res.json())
       .then((response) => {
         return response;
       });
-    console.log(data)
+    console.log(props.color)
     setHistoricData(data["prices"]);
     console.log(historicData)
   };
@@ -54,13 +55,13 @@ const HistoryChartModuleDetail = (props) => {
             label: 'My First Dataset',
             data: historicData.map((coin) => coin[1]),
             fill: true,
-            borderColor: 'rgb(75, 192, 192)',
-            tension: 0.4
+            borderColor: color,
+            borderWidth:1.2
           }],
         }}
         options={{
           responsive: true,
-          color: [{ fillColor: "red" }, { fillColor: "green" }],
+          // color: [{ fillColor: "red" }, { fillColor: "green" }],
           // tension:1,
             
           scales: {
@@ -112,4 +113,4 @@ const HistoryChartModuleDetail = (props) => {
   );
 };
 
-export default HistoryChartModuleDetail
+export default HistoryChartDetailModule
