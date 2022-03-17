@@ -13,7 +13,7 @@ function TableBodyRow({ item }) {
   const changeColor = (num) => {
     return num >= 0 ? "green" : "red";
   };
-  console.log(item)
+  // console.log(item)
   const navigate = useNavigate();
   const color = changeColor(item.price_change_percentage_24h);
   const currentPriceRAW = numberWithCommas(item.current_price);
@@ -30,11 +30,11 @@ function TableBodyRow({ item }) {
         navigate(`/CoinDetailPage/${item.id}/`);
       }}
     >
-      <TableCell id="rank">{item.market_cap_rank}</TableCell>
+      <TableCell id="rank" sx={{width:"2%"}}>{item.market_cap_rank}</TableCell>
 
       <TableCell
         id="name"
-        style={{ width: "20%" }}
+        sx={{ width: "20%" }}
       >
           <Box sx={{display:"flex",alginItems:"center"}} container>
           <Box align={"left"} sx={{width:"20%",display:"flex",justifyContent:"flex-start",alignItems:"center"}}   >
@@ -75,18 +75,18 @@ function TableBodyRow({ item }) {
         </Box>
       </TableCell>
 
-      <TableCell  align="right" sx={{width:"15%"}} >
+      <TableCell  align="right" sx={{width:"12%"}} >
         <Typography>
           {numberWithCommas(item.market_cap).toString().slice(0, -6)} M
         </Typography>
       </TableCell>
-      <TableCell  align="right" x={{width:"27%"}}>
+      <TableCell  align="right" x={{width:"20%"}}>
         <Typography>{numberWithCommas(item.total_volume)}</Typography>
       </TableCell>
-      <TableCell  align="right" x={{width:"20%"}}>
+      <TableCell  align="right" x={{width:"10%"}}>
         <Typography>{numberWithCommas(circulating)}</Typography>
       </TableCell>
-      <TableCell id="chart" sx={{ width:"9%",p:0}}>
+      <TableCell id="chart" sx={{ width:"12%",p:0}}>
         <HistoricDataChart id={item.id} color={color}  />
       </TableCell>
     </TableRow>

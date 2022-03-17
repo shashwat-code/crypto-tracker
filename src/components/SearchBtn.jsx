@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import {TextField} from "@mui/material"
 function SearchBtn({setInputText}){
     const [text,setText]=useState("")
     const handleFunction=(e)=>{
@@ -7,14 +7,13 @@ function SearchBtn({setInputText}){
         setInputText(e.target.value)
       }
     return(
-        <div className="btn-box" style={{backgroundColor:"white",width:"40%"}}>
-            <input 
-            value={text} 
-            onChange={(e)=>handleFunction(e)}
-            className="txt" 
-            placeholder="Search crypto" />
-                <img onClick={()=>{setInputText(text)}} id="search-img" src={require("../Assets/searchBtn.png")} />
-        </div>
+             <TextField id="demo-helper-text-misaligned-no-helper" label="Search Coin"
+             value={text}
+             color={"info"}
+             onChange={(e)=>{handleFunction(e)}}
+             sx={{width:"40%",mb:3}}
+             />
+
     )
 }
 export default SearchBtn;

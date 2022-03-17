@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import {useState} from "react"
 import { CoinList } from "../config/api"
+import {Box} from "@mui/material"
 import SearchBtn from "./SearchBtn"
 import ListOfCoins from "./ListOfCoins"
 import "../style/coinTable.css"
@@ -43,13 +44,13 @@ function CoinTable(){
 
     console.log(inputText)
     return(
-        <div id="container">
-            <SearchBtn  setInputText={setInputText} />
+        <Box id="container" sx={{mt:7,mb:2}} >
+            <SearchBtn  setInputText={setInputText} sx={{mb:2,mt:2}} />
             {
                 filteredData.length!==0?<ListOfCoins setParam={setParam} data={filteredData}/>:<ListOfCoins setParam={setParam} data={coins}/>
             }
             
-        </div>
+        </Box>
     )
 }
 export default CoinTable

@@ -55,7 +55,7 @@ const HistoricDataChart = (props) => {
               data: historicData.map((coin) => coin[1]),
               label: `1`,
               borderColor: props.color,
-              borderWidth: 0.7,
+              borderWidth: 0.9,
             },
           ],
         }}

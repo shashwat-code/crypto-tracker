@@ -1,7 +1,6 @@
 
-
+import "../style/App.css"
 import {useNavigate} from "react-router-dom"
-import { useState } from "react"
 import TableBodyRow from "./TableBodyRow"
 import { TableContainer,Paper,Table, TableHead, TableCell,TableBody} from "@mui/material"
 function ListOfCoins({data,setParam}){
@@ -10,18 +9,18 @@ function ListOfCoins({data,setParam}){
     const navigate = useNavigate()
 
     return(
-        <div>
+        
             <TableContainer component={Paper}  sx={{width:"99%",ml:1,mr:1}}>
-                <Table >
-                    <TableHead>
+                <Table  stickyHeader>
+                    <TableHead id="thead-fix" >
                         <TableCell >#</TableCell>
                         <TableCell onClick={()=>{setParam("name")}}  align="center" >Coin</TableCell>
-                        <TableCell align="right">Price</TableCell>
+                        <TableCell  align="right">Price</TableCell>
                         <TableCell  align="right">24h %</TableCell>
                         <TableCell  align="right">Market Cap</TableCell>
                         <TableCell  align="right">Volume(24h)</TableCell>
                         <TableCell  align="right">Circulating Supply</TableCell>
-                        <TableCell  align="right">Last 7 Days</TableCell>
+                        <TableCell  align="center">Last 7 Days</TableCell>
                     </TableHead>
                     <TableBody>
                             {
@@ -36,24 +35,6 @@ function ListOfCoins({data,setParam}){
                     </TableBody>
                 </Table>
             </TableContainer>
-        {/* <table id="coin-table">
-            <thead id="thead-fix">
-                <tr>
-                    
-                </tr>
-            </thead>
-            <tbody>
-                {
-                    data.map(item=>{
-                         return (
-                        
-                                <TableBodyRow key={item.id} item={item}  />
-                        )
-                    })
-                }
-            </tbody>
-        </table> */}
-        </div>
     )
 }
 export default ListOfCoins
