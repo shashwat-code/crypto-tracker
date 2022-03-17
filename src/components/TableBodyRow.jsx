@@ -24,7 +24,8 @@ function TableBodyRow({ item }) {
   const circulating = item.circulating_supply.toFixed(2);
   return (
     <TableRow
-      sx={{ width: "14%" }}
+      // sx={{ width: "1px" }}
+      style={{width:"12px"}}
       onClick={() => {
         navigate(`/CoinDetailPage/${item.id}/`);
       }}
