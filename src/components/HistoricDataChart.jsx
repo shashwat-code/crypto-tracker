@@ -43,7 +43,7 @@ const HistoricDataChart = (props) => {
   }
 
   return (
-    <Box sx={{ width: "99%", pr:1 }}>
+    <Box sx={{ width: "90%", pr:1 }}>
       <Line
         data={{
           labels: historicData.map((coin, index) => {
