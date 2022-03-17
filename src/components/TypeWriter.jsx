@@ -1,20 +1,21 @@
+import { Grid, Typography } from '@mui/material';
 import TypeWriterEffect from 'react-typewriter-effect';
 import {textArray} from "../config/data"
 function TypeWriter(){
     return(
-    <div id="typing-effect">
-    <h1 id="typewrite">Cryptocurrency </h1>
+    <Grid >
+    <Typography variant='h1' sx={{color:"white"}} >Cryptocurrency </Typography>
             <TypeWriterEffect 
-            // textStyle={{
-
-            // }}
+            textStyle={{
+                color:"white"
+            }}
             startDelay={1000}
-            cursorColor="red"
+            cursorColor="white"
             multiText={textArray}
             multiTextDelay={2000}
             typeSpeed={20}
         />
-    </div>
+    </Grid>
     )
 }
 export default TypeWriter

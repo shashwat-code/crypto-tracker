@@ -32,7 +32,7 @@ function CommunityDataModule({ score, data }) {
           </Typography>
           <Divider />
           <Typography sx={{ display: "flex", justifyContent: "space-between" }}>
-            <span>Reddit Subscribers: </span>{" "}
+            <span className="hiddenText">Reddit Subscribers: </span>{" "}
             <span>
               {data.reddit_subscribers ? data.reddit_subscribers : "Not Found"}
             </span>

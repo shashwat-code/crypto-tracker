@@ -13,6 +13,7 @@ import {
   Legend,
   Scale,
 } from "chart.js";
+import { Box } from "@mui/material";
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -42,7 +43,7 @@ const HistoricDataChart = (props) => {
   }
 
   return (
-    <div style={{ width: "90%", height: "5%", background: "none" }}>
+    <Box sx={{ width: "99%", pr:1 }}>
       <Line
         data={{
           labels: historicData.map((coin, index) => {
@@ -103,7 +104,7 @@ const HistoricDataChart = (props) => {
           },
         }}
       />
-    </div>
+    </Box>
   );
 };
 export default HistoricDataChart;

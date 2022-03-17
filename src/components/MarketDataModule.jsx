@@ -27,7 +27,7 @@ function MarketDataModule({
             variant={"subtitle"}
             sx={{ display: "flex", justifyContent: "space-between" }}
           >
-            <span>Total Volume</span>
+            <span className="hiddenText">Total Volume</span>
             <span>{total_volume.inr}</span>
           </Typography>
           <Divider />
@@ -37,7 +37,7 @@ function MarketDataModule({
             sx={{ display: "flex", justifyContent: "space-between" }}
           >
             <span>Total Supply</span>
-            <span>{total_supply.toFixed(2)}</span>
+            <span>{total_supply!==null?total_supply.toFixed(2):"Not Found"}</span>
           </Typography>
           <Divider />
 
@@ -45,7 +45,7 @@ function MarketDataModule({
             variant={"subtitle"}
             sx={{ display: "flex", justifyContent: "space-between" }}
           >
-            <span>Circulating Supply</span>
+            <span className="hiddenText">Circulating Supply</span>
             <span>{circulating_supply.toFixed(2)}</span>
           </Typography>
           <Divider />

@@ -23,7 +23,8 @@ const Carousel=()=>{
     if(items===null){return(<></>)}
     return (
         
-        <Grid lg={12}  id="carouselAlice">
+        <Grid lg={12} xs={12} id="carouselAlice" style={{backgroundColor:"blue",display:"flex",justifyContent:"flex-end"}} container >
+            <Grid item>
             <AliceCarousel
                 mouseTracking
                 infinite
@@ -36,6 +37,7 @@ const Carousel=()=>{
                 autoPlay
                 items={items}
             ></AliceCarousel>
+            </Grid>
         </Grid>
     )
 }

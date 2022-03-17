@@ -8,23 +8,23 @@ const Header = () => {
 
 
   return (
-    <AppBar position="static">
+    <AppBar position="static"  sx={{backgroundColor:"black"}}>
       <Container >
         <Toolbar >
+         
           <Typography
             variant="h4"
             noWrap
-            component="div"
-            sx={{display: { xs: 'none', md: 'flex',lg:'flex' },justifyContent:"flex-start" }}
+            // component={Link}
+            sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex',lg:'flex'},justifyContent:"center" }}
           >
             CRYPTO TRACKER
           </Typography>
           
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
-            component="div"
-            sx={{ flexGrow: 1,ml:2, display: { xs: 'flex', md: 'none' } }}
+            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none',lg:'none'},justifyContent:"center" }}
           >
             CRYPTO TRACKER
           </Typography>

@@ -32,9 +32,9 @@ const HistoryChartDetailModule = (props) => {
       .then((response) => {
         return response;
       });
-    console.log(props.color)
+    // console.log(props.color)
     setHistoricData(data["prices"]);
-    console.log(historicData)
+    // console.log(historicData)
   };
 
   useEffect(() => {

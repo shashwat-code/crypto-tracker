@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import {useState} from "react"
 import { CoinList } from "../config/api"
 import SearchBtn from "./SearchBtn"
-import Table from "./Table"
+import ListOfCoins from "./ListOfCoins"
 import "../style/coinTable.css"
 function CoinTable(){
 
@@ -46,7 +46,7 @@ function CoinTable(){
         <div id="container">
             <SearchBtn  setInputText={setInputText} />
             {
-                filteredData.length!==0?<Table setParam={setParam} data={filteredData}/>:<Table setParam={setParam} data={coins}/>
+                filteredData.length!==0?<ListOfCoins setParam={setParam} data={filteredData}/>:<ListOfCoins setParam={setParam} data={coins}/>
             }
             
         </div>
