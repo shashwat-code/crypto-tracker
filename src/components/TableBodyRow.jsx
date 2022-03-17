@@ -60,13 +60,18 @@ function TableBodyRow({ item }) {
 
       <TableCell  align="right"  sx={{width:"12%"}}>
         <Box sx={{ display: "flex",alignItems:"center", justifyContent:"flex-end" }}>
+          <Box sx={{width:"70%",display:"flex",justifyContent:"flex-end"}}>
           <img
-            style={{ width: "10%"}}
+            style={{ width: "16%"}}
             src={require(color === "green"
               ? "../Assets/green.png"
               : "../Assets/red.png")}
           ></img>
+
+          </Box>
+          <Box sx={{width:"30%"}}>
           <Typography style={{color:color}} sx={{ml:1}} >{pricePercentage}</Typography>
+          </Box>
         </Box>
       </TableCell>
 
@@ -78,10 +83,10 @@ function TableBodyRow({ item }) {
       <TableCell  align="right" x={{width:"27%"}}>
         <Typography>{numberWithCommas(item.total_volume)}</Typography>
       </TableCell>
-      <TableCell  align="right" x={{width:"26%"}}>
+      <TableCell  align="right" x={{width:"20%"}}>
         <Typography>{numberWithCommas(circulating)}</Typography>
       </TableCell>
-      <TableCell id="chart" sx={{ width:"7%",p:0}}>
+      <TableCell id="chart" sx={{ width:"9%",p:0}}>
         <HistoricDataChart id={item.id} color={color}  />
       </TableCell>
     </TableRow>

@@ -11,7 +11,7 @@ function ListOfCoins({data,setParam}){
 
     return(
         <div>
-            <TableContainer component={Paper}  sx={{mr:2,ml:2,width:"98%"}}>
+            <TableContainer component={Paper}  sx={{width:"92%",ml:4, mr:2,}}>
                 <Table >
                     <TableHead>
                         <TableCell >#</TableCell>
