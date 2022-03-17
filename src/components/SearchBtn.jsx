@@ -11,7 +11,7 @@ function SearchBtn({setInputText}){
              value={text}
              color={"info"}
              onChange={(e)=>{handleFunction(e)}}
-             sx={{width:{xs:"90%",lg:"50%"},mb:3}}
+             sx={{width:{xs:"90%",lg:"50%"},mb:2}}
              />
 
     )
