@@ -77,11 +77,11 @@ function TableBodyRow({ item }) {
 
       <TableCell  align="right" sx={{width:"15%"}} >
         <Typography className="hiddenText">
-          {numberWithCommas(item.market_cap).toString().slice(0, -6)} M
+          $ {numberWithCommas(item.market_cap).toString().slice(0, -6)} M
         </Typography>
       </TableCell>
-      <TableCell  align="right" x={{width:"20%"}}>
-        <Typography>{numberWithCommas(item.total_volume)}</Typography>
+      <TableCell classNmae="hiddenText"  align="right" x={{width:"23%"}}>
+        <Typography>$ {numberWithCommas(item.total_volume)}</Typography>
       </TableCell>
       <TableCell  align="right" x={{width:"10%"}}>
         <Typography>{numberWithCommas(circulating)}</Typography>
@@ -94,9 +94,3 @@ function TableBodyRow({ item }) {
 }
 export default TableBodyRow;
 
-/*
-1. assignment were good and had variety of questions.
-2. If there would be doubt solving session that would be great.
-3. Instructor had good knowledge of DSA and has in depth knowledge of topics.
-4. If there were quizzes that would also be a plus point.
-*/

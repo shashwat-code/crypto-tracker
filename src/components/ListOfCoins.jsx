@@ -10,7 +10,7 @@ function ListOfCoins({data,setParam}){
 
     return(
         
-            <TableContainer component={Paper}  sx={{width:"99%",overflow:"auto",ml:1,mr:1,display:{xs:"flex",lg:"flex"}}}>
+            <TableContainer component={Paper}  sx={{width:"99%",overflow:"auto",borderLeft:0,ml:1,mr:1,display:{xs:"flex",lg:"flex"}}}>
                 <Table  stickyHeader sx={{overflow:"scroll",}} >
                     <TableHead id="thead-fix" >
                         <TableCell >#</TableCell>
