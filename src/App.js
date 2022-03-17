@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import CoinDetailPage from "./Pages/CoinDetailPage";
 import "./style/App.css"
 import { Box } from "@mui/material";
+import Footer from "./components/Footer";
 function App() {
   
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/CoinDetailPage/:id" element={<CoinDetailPage />}></Route>
         </Routes>
       </Box>
+      <Footer />
     </Router>
   );
 }
