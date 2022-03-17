@@ -9,7 +9,7 @@ function Footer() {
     <Grid
       lg={12}
       container
-      style={{ position: "relative", bottom: 0, }}
+      style={{ position: "static", bottom: 0, }}
     >
       <Grid
         lg={3}
@@ -17,8 +17,9 @@ function Footer() {
         container
         sx={{
           display: "flex",
-          alignItems: "flex-end",
-          justifyContent: "center",
+          flexDirection:"column",
+          alignItems: "center",
+          justifyContent: "flex-end",
         }}
         order={{xs:1,lg:1}}
       >
@@ -26,6 +27,10 @@ function Footer() {
           <Typography variant="overline">Made with </Typography>
           <FavoriteIcon sx={{ color: "red", mr: 1, ml: 1 }} />
           <Typography variant="overline"> in India</Typography>
+        </Grid>
+        <Grid sx={{display:"flex",justifyContent:"center" }}container>
+          <Typography variant="overline" item><strong>Shashwat</strong></Typography>
+          <VerifiedIcon item sx={{color:"rgba( 46, 141, 221, 100%)"}} />
         </Grid>
       </Grid>
       <Grid lg={6} item container order={{xs:2,lg:2}}>
@@ -45,18 +50,15 @@ function Footer() {
         sx={{
           display: "flex",
           flexDirection:"column",
-          alignItems: "flex-start",
+          alignItems: "center",
           justifyContent: "flex-end",
         }}
       >
-        <Grid sx={{ml:5}}>
-          <Typography variant="overline">Shashwat</Typography>
-          <VerifiedIcon sx={{color:"rgba( 46, 141, 221, 100%)"}} />
-        </Grid>
        
-        <Grid sx={{display:"flex",justifyContent:"space-around"}} container>
-        <Typography variant="overline">Links</Typography>
-            <GitHubIcon sx={{color:"black"}} item />
+       <Typography variant="overline">Links</Typography>
+        <Grid sx={{display:"flex",justifyContent:"space-evenly"}} container>
+        
+            <GitHubIcon sx={{color:"black"}} item  />
             <LinkedInIcon sx={{color:"black"}} item/>
         </Grid>
       </Grid>
