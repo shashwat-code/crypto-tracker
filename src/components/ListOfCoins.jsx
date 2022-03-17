@@ -10,8 +10,8 @@ function ListOfCoins({data,setParam}){
 
     return(
         
-            <TableContainer component={Paper}  sx={{width:"99%",ml:1,mr:1}}>
-                <Table  stickyHeader>
+            <TableContainer component={Paper}  sx={{width:"99%",overflow:"auto",ml:1,mr:1,display:{xs:"flex",lg:"flex"}}}>
+                <Table  stickyHeader sx={{overflow:"scroll",}} >
                     <TableHead id="thead-fix" >
                         <TableCell >#</TableCell>
                         <TableCell onClick={()=>{setParam("name")}}  align="center" >Coin</TableCell>

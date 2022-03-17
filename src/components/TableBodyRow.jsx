@@ -75,8 +75,8 @@ function TableBodyRow({ item }) {
         </Box>
       </TableCell>
 
-      <TableCell  align="right" sx={{width:"12%"}} >
-        <Typography>
+      <TableCell  align="right" sx={{width:"15%"}} >
+        <Typography className="hiddenText">
           {numberWithCommas(item.market_cap).toString().slice(0, -6)} M
         </Typography>
       </TableCell>

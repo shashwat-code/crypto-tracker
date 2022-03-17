@@ -45,7 +45,7 @@ function CoinTable(){
     console.log(inputText)
     return(
         <Box id="container" sx={{mt:7,mb:2}} >
-            <SearchBtn  setInputText={setInputText} sx={{mb:2,mt:2}} />
+            <SearchBtn  setInputText={setInputText} sx={{mb:2,mt:2}}  />
             {
                 filteredData.length!==0?<ListOfCoins setParam={setParam} data={filteredData}/>:<ListOfCoins setParam={setParam} data={coins}/>
             }
