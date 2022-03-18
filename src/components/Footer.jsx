@@ -9,7 +9,7 @@ function Footer() {
     <Grid
       lg={12}
       container
-      style={{ position: "static", bottom: 0, }}
+      style={{ position: "absolute",height:"2vh" }}
     >
       <Grid
         lg={3}
@@ -30,7 +30,7 @@ function Footer() {
         </Grid>
         <Grid sx={{display:"flex",justifyContent:"center" }}container>
           <Typography variant="overline" item><strong>Shashwat</strong></Typography>
-          <VerifiedIcon item sx={{color:"rgba( 46, 141, 221, 100%)"}} />
+          {/* <VerifiedIcon item sx={{color:"rgba( 46, 141, 221, 100%)"}} /> */}
         </Grid>
       </Grid>
       <Grid lg={6} item container order={{xs:2,lg:2}}>
@@ -55,7 +55,7 @@ function Footer() {
         }}
       >
        
-       <Typography variant="overline">Links</Typography>
+       <Typography variant="overline" align={'left'}>Links</Typography>
         <Grid sx={{display:"flex",justifyContent:"space-evenly"}} container>
         
             <GitHubIcon sx={{color:"black"}} item  />

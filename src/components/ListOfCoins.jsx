@@ -2,7 +2,7 @@
 import "../style/App.css"
 import {useNavigate} from "react-router-dom"
 import TableBodyRow from "./TableBodyRow"
-import { TableContainer,Paper,Table, TableHead, TableCell,TableBody} from "@mui/material"
+import { TableContainer,Paper,Table, TableHead, TableCell,TableBody,Typography} from "@mui/material"
 function ListOfCoins({data,setParam}){
     
     
@@ -10,17 +10,17 @@ function ListOfCoins({data,setParam}){
 
     return(
         
-            <TableContainer id="thead-fix" component={Paper} sx={{ width:"99%",overflow:"auto",borderLeft:0,ml:1,mr:1,display:{xs:"flex",lg:"flex"}}}>
+            <TableContainer  component={Paper} sx={{ width:"99%",overflow:"hidden",borderLeft:0,ml:1,mr:1,display:{xs:"flex",lg:"flex"}}}>
                 <Table  stickyHeader sx={{overflow:"scroll",}} >
                     <TableHead>
                         <TableCell >#</TableCell>
                         <TableCell onClick={()=>{setParam("name")}}  align="center" >Coin</TableCell>
-                        <TableCell  align="right">Price</TableCell>
-                        <TableCell  align="right">24h %</TableCell>
-                        <TableCell  align="right">Market Cap</TableCell>
-                        <TableCell  align="right">Volume(24h)</TableCell>
-                        <TableCell  align="right">Circulating Supply</TableCell>
-                        <TableCell  align="center">Last 7 Days</TableCell>
+                        <TableCell  align="right"><Typography>Price</Typography></TableCell>
+                        <TableCell  align="right" ><Typography>24h %</Typography></TableCell>
+                        <TableCell  align="right"><Typography>Market Cap</Typography></TableCell>
+                        <TableCell  align="right"><Typography>Volume(24h)</Typography></TableCell>
+                        <TableCell  align="right"><Typography>Circulating Supply</Typography></TableCell>
+                        <TableCell  align="center"><Typography>Last 7 Days</Typography></TableCell>
                     </TableHead>
                     <TableBody>
                             {
