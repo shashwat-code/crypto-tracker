@@ -10,10 +10,11 @@ function ListOfCoins({data,setParam}){
     return(
         <>
          <TableContainer  
-            sx={{ width:"99%",borderLeft:0,ml:1,mr:1,display:{xs:"none",md:"flex",lg:"flex"}}}
+         id="thead-fix" 
+            sx={{ width:"99%",borderLeft:0,ml:1,mr:1,display:{xs:"none",md:"flex",lg:"flex",maxHeight:"70vh"}}}
             >
-                <Table   sx={{overflow:"scroll",}} component='table' >
-                    <TableHead  >
+                <Table  stickyHeader  sx={{overflow:"scroll",}}  >
+                    <TableHead   >
                         <TableCell   >#</TableCell>
                         <TableCell  onClick={()=>{setParam("name")}}  align="center"  >Coin</TableCell>
                         <TableCell  align="right"><Typography>Price</Typography></TableCell>
@@ -37,10 +38,11 @@ function ListOfCoins({data,setParam}){
                 </Table>
             </TableContainer>
             <TableContainer  
-            sx={{ml:0,mr:0,display:{xs:"flex",lg:"none"}}}
+            
+            sx={{ml:0,mr:0,display:{xs:"flex",lg:"none"},maxHeight:"80vh"}}
             style={{overflowX:"scroll",width: 365,position:"relative"}}
             >
-                <Table   sx={{overflow:"scroll",}} component='table' >
+                <Table stickyHeader  sx={{overflow:"scroll",}} component='table' >
                     <TableHead  className="fixTableHead">
                         <TableCell className="headcol"   >#</TableCell>
                         <TableCell className="headcol" onClick={()=>{setParam("name")}}  align="center"  >Coin</TableCell>
