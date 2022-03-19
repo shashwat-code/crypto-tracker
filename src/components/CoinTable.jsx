@@ -37,12 +37,12 @@ function CoinTable(){
             return coin.name.toLowerCase().includes(inputText) || coin.symbol.toLowerCase().includes(inputText)
         })
         setFilteredData(filteredData)
-        console.log(filteredData)
+        // console.log(filteredData)
     }
 
     
 
-    console.log(inputText)
+    // console.log(inputText)
     return(
         <Box id="container" sx={{mt:7,mb:2}} >
             <SearchBtn  setInputText={setInputText} sx={{mb:2,mt:2}}  />

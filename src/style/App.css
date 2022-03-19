@@ -14,10 +14,26 @@ body{
 }
 
 #thead-fix{
-  position: sticky;
+  position: fixed;
   top:0px;
   z-index: 999; 
-  /* background: rgba(0,0,0,1); */
+  background: white;
+}
 
+.headcol {
+  position: sticky;
+  width: 1500px;
+  left: 0;
+  background-color: white;
+  top: auto;
 
+}
+
+.fixTableHead {
+  overflow-y: auto;
+  height: 110px;
+}
+.fixTableHead thead th {
+  position: sticky;
+  top: 0;
 }

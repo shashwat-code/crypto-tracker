@@ -56,10 +56,10 @@ function Footer() {
       >
        
        <Typography variant="overline" align={'left'}>Links</Typography>
-        <Grid sx={{display:"flex",justifyContent:"space-evenly"}} container>
+        <Grid sx={{display:"flex",justifyContent:"space-evenly",pb:1}} container>
         
-            <GitHubIcon sx={{color:"black"}} item  />
-            <LinkedInIcon sx={{color:"black"}} item/>
+            <GitHubIcon sx={{color:"black"}} item  aria-label='Github' onClick={()=>{window.open('https://github.com/shashwat-code')}} />
+            <LinkedInIcon sx={{color:"black",pointerEvents:"cursor"}} item aria-label='LinkedIn' onClick={()=>{window.open('https://www.linkedin.com/in/shashwat-chauhan-3009461b0/')}}/>
         </Grid>
       </Grid>
     </Grid>

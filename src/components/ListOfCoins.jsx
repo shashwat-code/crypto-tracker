@@ -2,19 +2,20 @@
 import "../style/App.css"
 import {useNavigate} from "react-router-dom"
 import TableBodyRow from "./TableBodyRow"
+
 import { TableContainer,Paper,Table, TableHead, TableCell,TableBody,Typography} from "@mui/material"
 function ListOfCoins({data,setParam}){
     
-    
-    const navigate = useNavigate()
 
     return(
-        
-            <TableContainer  component={Paper} sx={{ width:"99%",overflow:"hidden",borderLeft:0,ml:1,mr:1,display:{xs:"flex",lg:"flex"}}}>
-                <Table  stickyHeader sx={{overflow:"scroll",}} >
-                    <TableHead>
-                        <TableCell >#</TableCell>
-                        <TableCell onClick={()=>{setParam("name")}}  align="center" >Coin</TableCell>
+        <>
+         <TableContainer  
+            sx={{ width:"99%",borderLeft:0,ml:1,mr:1,display:{xs:"none",md:"flex",lg:"flex"}}}
+            >
+                <Table   sx={{overflow:"scroll",}} component='table' >
+                    <TableHead  >
+                        <TableCell   >#</TableCell>
+                        <TableCell  onClick={()=>{setParam("name")}}  align="center"  >Coin</TableCell>
                         <TableCell  align="right"><Typography>Price</Typography></TableCell>
                         <TableCell  align="right" ><Typography>24h %</Typography></TableCell>
                         <TableCell  align="right"><Typography>Market Cap</Typography></TableCell>
@@ -35,6 +36,36 @@ function ListOfCoins({data,setParam}){
                     </TableBody>
                 </Table>
             </TableContainer>
+            <TableContainer  
+            sx={{ml:0,mr:0,display:{xs:"flex",lg:"none"}}}
+            style={{overflowX:"scroll",width: 365,position:"relative"}}
+            >
+                <Table   sx={{overflow:"scroll",}} component='table' >
+                    <TableHead  className="fixTableHead">
+                        <TableCell className="headcol"   >#</TableCell>
+                        <TableCell className="headcol" onClick={()=>{setParam("name")}}  align="center"  >Coin</TableCell>
+                        <TableCell  align="right"><Typography>Price</Typography></TableCell>
+                        <TableCell  align="right" ><Typography>24h %</Typography></TableCell>
+                        <TableCell  align="right"><Typography>Market Cap</Typography></TableCell>
+                        <TableCell  align="right"><Typography>Volume(24h)</Typography></TableCell>
+                        <TableCell  align="right"><Typography>Circulating Supply</Typography></TableCell>
+                        <TableCell  align="center"><Typography noWrap>Last 7 Days</Typography></TableCell>
+                    </TableHead>
+                    <TableBody>
+                            {
+                            data.map(item=>{
+                                return (
+                                
+                                        <TableBodyRow key={item.id} item={item}  />
+                                )
+                            })
+                        }
+
+                    </TableBody>
+                </Table>
+            </TableContainer>
+        </>
+           
     )
 }
 export default ListOfCoins
