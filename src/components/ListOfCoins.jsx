@@ -11,7 +11,7 @@ function ListOfCoins({data,setParam}){
         <>
          <TableContainer  
          id="thead-fix" 
-            sx={{ width:"99%",borderLeft:0,ml:1,mr:1,display:{xs:"none",md:"flex",lg:"flex",maxHeight:"70vh"}}}
+            sx={{ width:"99%",borderLeft:0,ml:1,mr:1,display:{xs:"none",md:"flex",lg:"flex",maxHeight:"74vh"}}}
             >
                 <Table  stickyHeader  sx={{overflow:"scroll",}}  >
                     <TableHead   >

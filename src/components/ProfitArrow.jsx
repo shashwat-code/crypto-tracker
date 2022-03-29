@@ -5,11 +5,17 @@ import {red,green} from "@mui/material/colors"
 import {Box} from "@mui/material"
 import { useEffect } from "react"
 import {useState} from 'react'
+
+
+// value : percentage change 
+// time: 
 function ProfitArrow({value,time}){
     const [arrow,setArrow]=useState("")
     const [percentage,setPercentage]=useState(0)
+    console.log("entered this but not responding")
     const change=()=>{
         if(value>=0){
+            console.log("entered this but not responding")
             setPercentage("+ "+value+"%")
             setArrow(<ArrowDropUp sx={{color:green[500],width:"23%",height:"23%"}} />)
         }else{

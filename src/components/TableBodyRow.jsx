@@ -1,6 +1,7 @@
 import HistoricDataChart from "./HistoricDataChart";
 import { numberWithCommas } from "../config/commonFunction";
 import { useNavigate } from "react-router-dom";
+import ProfitArrow from "./ProfitArrow"
 import {
   Grid,
   TableCell,
@@ -11,6 +12,8 @@ import {
 } from "@mui/material";
 function TableBodyRow({ item }) {
   const changeColor = (num) => {
+     const color =num >= 0 ? "green" : "red";
+    console.log(color)
     return num >= 0 ? "green" : "red";
   };
   // console.log(item)
@@ -134,6 +137,7 @@ function TableBodyRow({ item }) {
             <Box
               sx={{ width: "70%", display:{xs:"none",md:"none",lg:"block"}, justifyContent: "flex-end" }}
             >
+              {/* <ProfitArrow value={pricePercentageRAW} time={item.time} /> */}
               <img
                 style={{ width: "16%" }}
                 src={require(color === "green"
