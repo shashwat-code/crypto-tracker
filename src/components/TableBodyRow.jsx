@@ -13,7 +13,7 @@ import {
 function TableBodyRow({ item }) {
   const changeColor = (num) => {
      const color =num >= 0 ? "green" : "red";
-    console.log(color)
+    // console.log(color)
     return num >= 0 ? "green" : "red";
   };
   // console.log(item)
@@ -149,7 +149,7 @@ function TableBodyRow({ item }) {
               sx={{ width: "70%",display:{xs:"flex",md:"none",lg:"none"}, justifyContent: "flex-end" }}
             >
               <img
-                style={{ width: "26%" }}
+                style={{ width: "30%" }}
                 src={require(color === "green"
                   ? "../Assets/green.png"
                   : "../Assets/red.png")}
@@ -157,7 +157,7 @@ function TableBodyRow({ item }) {
             </Box>
             <Box sx={{ width: "30%" }}>
               <Typography style={{ color: color }} sx={{ ml: 1 }} >
-                {pricePercentage}
+                {pricePercentage}%
               </Typography>
             </Box>
           </Box>

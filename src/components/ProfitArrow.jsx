@@ -12,10 +12,10 @@ import {useState} from 'react'
 function ProfitArrow({value,time}){
     const [arrow,setArrow]=useState("")
     const [percentage,setPercentage]=useState(0)
-    console.log("entered this but not responding")
+    // console.log("entered this but not responding")
     const change=()=>{
         if(value>=0){
-            console.log("entered this but not responding")
+            // console.log("entered this but not responding")
             setPercentage("+ "+value+"%")
             setArrow(<ArrowDropUp sx={{color:green[500],width:"23%",height:"23%"}} />)
         }else{
